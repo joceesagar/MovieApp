@@ -11,7 +11,7 @@ export const TMDB_CONFIG = {
 export const fetchMovies = async ({ query }: { query: string }) => {
     const endpoint = query
         ? `${TMDB_CONFIG.BASE_URL}/search/movie?query=${encodeURIComponent(query)}` //fetch movies according to user search. encodedURIComponent is for not escaping special characters
-        : `${TMDB_CONFIG}/discover/movie?sort_by=popularity.desc`; //fetch most popular movies
+        : `${TMDB_CONFIG.BASE_URL}/discover/movie?sort_by=popularity.desc`; //fetch most popular movies
 
 
     const response = await fetch(endpoint, {
