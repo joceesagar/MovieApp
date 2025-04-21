@@ -66,12 +66,14 @@ export default function Index() {
                 keyExtractor={(item) => item.id.toString()}
                 numColumns={3}
                 columnWrapperStyle={{
-                  justifyContent: "flex-start",
-                  gap: 10,
-                  paddingRight: 5,
-                  marginBottom: 10,
+                  justifyContent: 'center',
+                  gap: 16,
+                  marginVertical: 16
                 }}
-                className="mt-2 pb-34"
+                contentContainerStyle={{
+                  paddingBottom: 100
+                }}
+                className="px-5"
                 scrollEnabled={false}
               />
             </>
