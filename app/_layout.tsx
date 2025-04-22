@@ -9,8 +9,7 @@ export default function RootLayout() {
   return (
     <>
       <StatusBar
-        backgroundColor="transparent" // Make the status bar background transparent
-        translucent={true} // Allow content to draw under the status bar
+        hidden={true}
       />
       <Stack>
         {/* 👇 This sets up the (tabs) folder as the main screen group using bottom tab navigation */}
@@ -21,7 +20,7 @@ export default function RootLayout() {
 
         {/* 👇 This adds another screen to the stack for movie detail pages (navigated from tabs) */}
         <Stack.Screen
-          name="movie/[id]"
+          name="movies/[id]"
           options={{ headerShown: false }}
         />
       </Stack>
