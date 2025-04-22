@@ -1,50 +1,75 @@
-# Welcome to your Expo app 👋
+# 🎬 MovieApp
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+MovieApp is a mobile application built with **React Native (using Expo)** that allows users to browse, search, and explore movies using the **TMDb API**. It also uses **Appwrite** as a Backend-as-a-Service (BaaS) solution for handling trending analytics, user data, and more. This is my **first React Native project**, through which I learned and implemented key mobile development concepts!
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Features
 
-   ```bash
-   npm install
-   ```
+- 🔍 **Search Movies** – Instantly search for any movie using TMDb.
+- 🔥 **Trending Movies** – Discover movies trending based on how often users search for them.
+- 🎞️ **Movie Details** – View detailed information like:
+  - Budget
+  - Revenue
+  - Production companies
+  - Genres, Release Date, and more.
+- 🧠 **Learning Experience** – First project where I learned React Native deeply!
+- 🛠️ **Under Development**
+  - User **profile page**
+  - Save favorite movies to a **watchlist**
 
-2. Start the app
+---
 
-   ```bash
-    npx expo start
-   ```
+## 📸 Screenshots (optional)
 
-In the output, you'll find options to open the app in a
+![Home Screen](./screenshots/screenshot1.jpeg)
+![Home Screen](./screenshots/screenshot2.jpeg)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🧪 Tech Stack
 
-## Get a fresh project
+| Tech                                                                | Description                             |
+| ------------------------------------------------------------------- | --------------------------------------- |
+| [React Native](https://reactnative.dev/)                            | Cross-platform mobile app framework     |
+| [Expo](https://expo.dev/)                                           | Toolchain for React Native apps         |
+| [TMDb API](https://www.themoviedb.org/documentation/api)            | Movie data provider                     |
+| [Appwrite](https://appwrite.io/)                                    | BaaS for database and user management   |
+| [TypeScript](https://www.typescriptlang.org/)                       | Static typing for better dev experience |
+| [Tailwind CSS for RN](https://tailwindcss-react-native.vercel.app/) | For styling UI components               |
+| [expo-router](https://expo.github.io/router/docs)                   | File-based navigation in Expo apps      |
 
-When you're ready, run:
+---
+
+## 🛠️ Getting Started
+
+### 1. Setup environmental variables
+
+##### EXPO_PUBLIC_MOVIE_API_KEY
+
+##### EXPO_PUBLIC_APPWRITE_PROJECT_ID
+
+##### EXPO_PUBLIC_APPWRITE_DATABASE_ID
+
+##### EXPO_PUBLIC_APPWRITE_COLLECTION_ID
+
+### 2. Clone the repo
 
 ```bash
-npm run reset-project
+git clone https://github.com/your-username/movieapp.git
+cd movieapp
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 3. Install Dependencies
 
-## Learn more
+```bash
+npm install
+# or
+yarn install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 3. Start the app using Expo:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+npx expo start
+```
