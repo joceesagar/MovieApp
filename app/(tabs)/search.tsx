@@ -6,6 +6,7 @@ import useFetch from '@/services/useFetch'
 import { fetchMovies } from '@/services/api'
 import { icons } from '@/constants/icons'
 import SearchBar from '@/components/SearchBar'
+import { updateSearchCount } from '@/services/appwrite'
 
 const search = () => {
     const [searchQuery, setSearchQuery] = useState('')
@@ -19,13 +20,19 @@ const search = () => {
     } = useFetch<Movie[]>(() => fetchMovies({ query: searchQuery }), false)
 
     useEffect(() => {
+
         const timeout = setTimeout(async () => {
             if (searchQuery.trim()) {
                 await loadMovies();
+                if (movies?.length! > 0 && movies?.[0]) {
+                    await updateSearchCount(searchQuery, movies[0]);
+                }
+
             } else {
                 reset();
             }
         }, 500); //doesnot fetch continuously. If we hold for 500ms after typing something then only it will fetch. It is to reduce api calls.
+
         return () => clearTimeout(timeout)
 
 
