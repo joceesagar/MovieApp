@@ -24,19 +24,21 @@ const search = () => {
         const timeout = setTimeout(async () => {
             if (searchQuery.trim()) {
                 await loadMovies();
-                if (movies?.length! > 0 && movies?.[0]) {
-                    await updateSearchCount(searchQuery, movies[0]);
-                }
-
             } else {
                 reset();
             }
         }, 500); //doesnot fetch continuously. If we hold for 500ms after typing something then only it will fetch. It is to reduce api calls.
 
         return () => clearTimeout(timeout)
-
-
     }, [searchQuery])
+
+
+    useEffect(() => {
+        if (movies?.length! > 0 && movies?.[0]) {
+            updateSearchCount(searchQuery, movies[0]);
+        }
+    }, [movies])
+
     return (
         <View className='flex-1 bg-primary'>
             <Image source={images.bg} className='flex-1 absolute z-0 w-full' resizeMode='cover' />
